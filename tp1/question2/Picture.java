@@ -20,6 +20,7 @@ public class Picture {
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Circle sun2;
 
     /**
      * Constructor for objects of class Picture
@@ -55,8 +56,28 @@ public class Picture {
         sun.moveVertical(-10);
         sun.changeSize(60);
         sun.makeVisible();
+        
+        sun2 = new Circle();
+        sun2.changeColor("blue");
+        sun2.moveHorizontal(200);
+        sun2.moveVertical(5);
+        sun2.changeSize(50);
+        sun2.makeVisible();
+        
+        //tester la methode
+        //faireCoucherSoleil(sun2);
     }
-
+    /*   
+     * Question 2.3 une methode qui permet au soleil en parametre de se coucher
+     */
+    public void faireCoucherSoleil(Circle c)
+    {
+        //le faire coucher de facon vertical directe
+        c.slowMoveVertical(100); //cette methode ne fonctionne pas
+        
+        //PS: on pourrai le faire coiucher 
+        //    de facon horizontal en utulisant les methode demander
+    }
     /**
      * Change this picture to black/white display
      */
